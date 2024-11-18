@@ -1,9 +1,13 @@
-name: CI
+# Flujo de trabajo simple para implementar contenido estático en Github Pages
+name: CI API TOGETHER
 
 on:
+  # Se ejecuta en anotaciones dirigidas a la rama predeterminada
   push:
-    branches:
-      - master
+    branches: ['main']
+
+  # Te permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones
+  workflow_dispatch:
 
 jobs:
   build:

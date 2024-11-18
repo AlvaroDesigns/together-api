@@ -1,20 +1,33 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import {
+  IsDateString,
+  IsInt,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+} from "class-validator";
 
 export class CreateItineraryDto {
-  @IsEmail()
   @IsString()
   @IsNotEmpty()
-  email: string;
+  title: string;
 
-  @IsString()
+  @IsDateString()
   @IsNotEmpty()
-  password: string;
+  date: string;
 
-  @IsString()
+  @IsDateString()
   @IsNotEmpty()
-  name: string;
+  startDate: string;
+
+  @IsDateString()
+  @IsNotEmpty()
+  endDate: string;
 
   @IsOptional()
   @IsString()
-  avatar?: string;
+  image?: string;
+
+  @IsInt()
+  @IsNotEmpty()
+  days: number;
 }

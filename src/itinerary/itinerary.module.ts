@@ -1,10 +1,10 @@
-import { Module } from '@nestjs/common';
-import { PrismaService } from 'src/prisma.service';
-import { ItineraryController } from './itinerary.controller';
-import { ItineraryService } from './itinerary.service';
+import { Module } from "@nestjs/common";
+import { PrismaService } from "src/prisma/prisma.service";
+import { ItinerariesController } from "./itinerary.controller";
+import { ItinerariesService } from "./itinerary.service";
 
 @Module({
-  controllers: [ItineraryController],
-  providers: [ItineraryService, PrismaService],
+  controllers: [ItinerariesController],
+  providers: [ItinerariesService, PrismaService],
 })
 export class ItineraryModule {}
